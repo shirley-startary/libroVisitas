@@ -3,12 +3,25 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <style media="screen">
+      div.scroll {
+
+      height: 100px;
+      overflow: scroll;
+      }
+    </style>
+
   </head>
   <body>
     <div class="">
         <h2>Artículos</h2>
         <div id="contenedorNuevosArticulos">
+        </div>
 
+        <div class="scroll" hidden="" id="divConScroll">
+          <ol id="listaDeVisitas">
+
+          </ol>
         </div>
     </div>
     <div class="" >
@@ -17,29 +30,35 @@
       <button type="button" name="button" onclick="textoMediano();">Texto Mediano</button>
       <button type="button" name="button" onclick="textoChico();">Texto Chico</button>
       <button type="button" name="button" onclick="colorTexto();">Color de Texto</button>
-      <button type="button" name="button" onclick="colorFondo();">Color de Fondo</button>
-      <button type="button" name="button" onclick="alinearIzquierda();">Alinear Izquierda</button>
-      <button type="button" name="button"onclick="alinearCentro();">Centrar</button>
-      <button type="button" name="button"onclick="alinearDerecha();">Alinear Derecha</button>
-      <button type="button" name="button" onclick="agregarImagen()">Agregar imagen</button><br>
+      <button type="button" name="button" onclick="colorFondo();">Color de Fondo</button><br/>
+      <button type="button" name="button" onclick="alinearIzquierda();" img="assets/images/imagenTextoLeft.jpeg">Alinear Izquierda</button>
+      <button type="button" name="button" onclick="alinearCentro();">Centrar</button>
+      <button type="button" name="button" onclick="alinearDerecha();">Alinear Derecha</button>
+      <button type="button" name="button" onclick="agregarImagen()">Agregar imagen</button>
+      <select>
+        <option value="Verdana">Verdana</option>
+        <option value="Arial">Arial</option>
+        <option value="cursive">Comic Sans</option>
+        <option value="fantasy">fantasy</option>
+      </select><br/>
 
       <textarea id="textoArea" name="name" rows="8" cols="80" onkeyup="obtenerTextPreview()"></textarea>
 
-      <h3>contenido</h3>
-      <div class="">
+      <h3>Contenido:</h3>
+      <div id="visita">
+        <button id="botonEliminar" value=0 type="button" onclick="eliminarNota(this.value );" hidden="">Eliminar Nota</button>
         <p id="text" ></p>
+        <img  id="imagenNota" src="" alt="" hidden="">
+        <hr id="lineaSeparadora" hidden/>
 
       </div>
 
-
-      <button type="button" name="button" onclick="enviar();">Enviar</button>
-    </div>
-    <div class="aqui van unos botones de style">
-
-    </div>
+      <div>
+        <button type="button" name="button" onclick="enviar();">Enviar</button>
+      </div>
 
 
-    <script type="text/javascript" src= "libroVisitas.js">
+    <script type="text/javascript" src= "assets/js/libroVisitas.js">
     </script>
   </body>
 </html>
