@@ -17,7 +17,6 @@ function limpiar(){
   document.getElementById("imagenNota").src="";
   //oculta la x de la imagen al momento de limpiar.
   //document.getElementById("imagenNota").addAttribute("hidden");
-
 }
 
 function agregarImagen(){
@@ -123,4 +122,11 @@ function agregarLista(){
   document.getElementById("listaDeVisitas").appendChild(elementolistaVisita);
   console.log(elementolistaVisita);
   document.getElementById("divConScroll").removeAttribute("hidden");
+}
+
+function cambiarTipoLetra(value){
+  var valor=value;
+  document.getElementById("text").style.fontFamily = cursive;
+
+    alert(valor);
 }

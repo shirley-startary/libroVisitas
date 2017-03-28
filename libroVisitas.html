@@ -31,11 +31,14 @@
       <button type="button" name="button" onclick="textoChico();">Texto Chico</button>
       <button type="button" name="button" onclick="colorTexto();">Color de Texto</button>
       <button type="button" name="button" onclick="colorFondo();">Color de Fondo</button><br/>
-      <button type="button" name="button" onclick="alinearIzquierda();" img="assets/images/imagenTextoLeft.jpeg">Alinear Izquierda</button>
-      <button type="button" name="button" onclick="alinearCentro();">Centrar</button>
-      <button type="button" name="button" onclick="alinearDerecha();">Alinear Derecha</button>
+      <button type="button" name="button" onclick="alinearIzquierda();">
+        <img src="assets/images/imagenTextoLeft.jpeg" width="25px" height="25px"/></button>
+      <button type="button" name="button" onclick="alinearCentro();">
+        <img src="assets/images/imagenCentrarTexto.jpeg" width="25px" height="25px"/></button>
+      <button type="button" name="button" onclick="alinearDerecha();">
+        <img src="assets/images/imagenTextoRight.jpeg" width="25px" height="25px"/></button>
       <button type="button" name="button" onclick="agregarImagen()">Agregar imagen</button>
-      <select>
+      <select id="cambiarLetra" onchange="cambiarTipoLetra(this.value);">
         <option value="Verdana">Verdana</option>
         <option value="Arial">Arial</option>
         <option value="cursive">Comic Sans</option>
